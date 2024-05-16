@@ -1,29 +1,21 @@
 import { NavLink } from "react-router-dom"
+import SearchBar from "./Searchbar";
 function Navbar() {
   return (
-    <nav className="flex border p-3">
-      <NavLink className=" text-xl font-semibold" to="./" >
-        GebeyaShop 
+    <nav className="flex border px-10 items-center justify-between">
+      <NavLink className=" text-md font-semibold" to="./" >
+        Gebeya 
       </NavLink>
-      <ul className="flex mx-auto items-center space-x-4">
-        <li>
-            <NavLink to='./'>Home</NavLink>
-            </li>
-            <li>
-            <NavLink to='./product'>Product</NavLink>
-            </li>
-            <li>
-            <NavLink to='./about'>About</NavLink>
-            </li>
-            <li>
-            <NavLink to='./contact'>Contact</NavLink>
-        </li>
-      </ul>
-      <div className="space-x-4">
-        <NavLink to="./login">Login</NavLink>
-        <NavLink to="./register">Register</NavLink>
-        <NavLink to="./cart">Cart</NavLink>
+      <div className=" p-2">
+        <SearchBar />
       </div>
+     
+      <ul className="flex space-x-2 font-thin text-xs">
+        <li><NavLink>Profile</NavLink></li>
+        <li><NavLink>Products</NavLink></li>
+        <li><NavLink>Orders</NavLink></li>
+        <li><NavLink>My cart</NavLink></li>
+      </ul>
     </nav>
   )
 }

@@ -1,13 +1,23 @@
+import Carousel from "../components/ImageSlider"
 import Navbar from "../components/navbar"
-import ImageSlider from "../components/ImageSlider"
-import { SliderData } from "../components/SliderData"
+const DATA = [ {
+  "image": "brand.webp",
+},
+ {
+  "image": "brand.webp",
+},
+ {
+  "image": "brand.webp",
+},
+
+]
 
 
 function Home() {
   return (
-    <div>
+    <div className=" container  ">
       <Navbar />
-      <ImageSlider slides={SliderData} />
+      <Carousel data={DATA} />
     </div>
   )
 }
